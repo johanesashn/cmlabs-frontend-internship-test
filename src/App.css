@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&family=Poppins:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: rgb(215, 6, 6);
+  background-size: cover;
+}
+
+body {
+  overflow-x: hidden; 
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  height: 50px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: .05rem;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  transition: all .3s;
+}
+
+nav .menu-toggle {
+  display: none;
+}
+
+.nav-title {
+  font-size: calc(1rem + 1.5vmin);
+}
+
+nav.active_nav {
+  background-color: rgb(215, 6, 6);
+}
+
+nav span {
+  color: rgb(215, 6, 6);
+}
+
+nav span.active_span{
+  color: white;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+  font-weight: bolder;
+}
+
+.nav-list > * {
+  margin: 0 1rem;
+}
+
+header {
+  margin-top: 30px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* position: relative; */
+  overflow-x: hidden;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(4rem + 5vmin);
+  line-height: calc(4rem + 5vmin);
+  position: relative;
+  width: fit-content;
+}
+
+.header-button {
+  border: none;
+  padding: .7rem 1.5rem;
+  border-radius: 20px;
+  background-color: rgb(215, 6, 6);
+  color: white;
+  width: fit-content;
+  letter-spacing: .1rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.background {
+  height: 400px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 15px;
+  animation: 20s rotate infinite ease-in-out;
+}
+
+.contact {
+  font-family: 'Poppins', sans-serif;
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: calc(1.5rem + 2vmin);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.foods {
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.foods h2 {
+  margin-bottom: 50px;
+}
+
+.food-container {
+  margin: auto;
+  width: 80%;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    ". one two ."
+    "three one two four"
+    "three five six four"
+    "seven five six eight"
+    "seven nine ten eight"
+    "eleven nine ten twelve"
+    "eleven thirteen fourteen twelve"
+    ". thirteen fourteen ."
+    ;
+    /* grid-template-areas: 
+      "one two three four"  
+      "five six seven eight"  
+      "nine ten eleven twelve"  
+      "thirteen fourteen fifteen sixteen"  
+      "seventeen . . ."  
+    ; */
+}
+
+.food-card {
+  box-sizing: border-box;
+  height: fit-content;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: rgba(71, 71, 72, 0.2) 0px 0px 20px;
+  font-weight: bolder;
+  padding: 1rem;
+  transition: all .5s;
+}
+
+.food-card:hover {
+  background-color: rgb(215, 6, 6);
+}
+
+.food-card img {
+  margin: 1rem;
+  width: calc(100% - 2rem);
+  transition: .3s;
+}
+
+.food-card img:hover{
+  transform: scale(1.1);
+}
+
+.food-name {
+  font-size: calc(.7rem + .5vmin);
+}
+
+.food-card.one {
+  grid-area: one;
+}
+.food-card.two {
+  grid-area: two;
+}
+.food-card.three {
+  grid-area: three;
+}
+.food-card.four {
+  grid-area: four;
+}
+.food-card.five {
+  grid-area: five;
+}
+.food-card.six {
+  grid-area: six;
+}
+.food-card.seven {
+  grid-area: seven;
+}
+.food-card.eight {
+  grid-area: eight;
+}
+.food-card.nine {
+  grid-area: nine;
+}
+.food-card.ten {
+  grid-area: ten;
+}
+.food-card.eleven {
+  grid-area: eleven;
+}
+.food-card.twelve {
+  grid-area: twelve;
+}
+.food-card.thirteen {
+  grid-area: thirteen;
+}
+.food-card.fourteen {
+  grid-area: fourteen;
+}
+
+.card-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-card:hover .visit {
+  background-color: white;
+  color: black;
+}
+
+.visit {
+  transition: all .5s;
+  border: none;
+  background-color: rgb(215, 6, 6);
+  color: white;
+  padding: .3rem 1rem;
+  border-radius: 20px;
+  letter-spacing: .05rem;
+  cursor: pointer;
+}
+
+.contact form {
+  display: grid;
+  grid-template-areas: 
+    "name email"
+    "feedback feedback";
+  gap: .5rem;
+  width: 60%;
+  margin: auto;
+}
+
+.contact input {
+  padding: .3rem .6rem;
+  font-size: .8rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 3px;
+  /* border: 1.5px solid black; */
+  border: none;
+}
+
+.contact input:focus, .input-feedback {
+  outline: none;
+}
+
+.input-name {
+  grid-area: name;
+}
+
+.input-mail {
+  grid-area: email;
+}
+
+.input-feedback {
+  font-family: 'Poppins', sans-serif;
+  padding: .3rem .6rem;
+  font-size: .8rem;
+  grid-area: feedback;
+  resize: none;
+  font-size: .8rem;
+  height: 100px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 3px;
+  /* border: 1.5px solid black; */
+}
+
+.submit {
+  margin-top: 10px;
+  border: none;
+  width: 80px;
+  padding: .3rem .6rem;
+  background-color: rgb(215, 6, 6);
+  color: white;
+  border-radius: 5px;
+  letter-spacing: .05rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: .9rem;
+  letter-spacing: .05rem;
+  background-color: rgb(215, 6, 6);
+  padding: 2rem;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+footer img {
+  height: 2rem;
+  margin: 1rem .5rem;
+}
+
+.navbarChild-title{
+  margin-right: 50px;
+}
+
+.navbarChild-home{
+  font-weight: bolder;
+}
+
+.content {
+  font-family: 'Poppins', sans-serif;
+}
+
+.content-title {
+  margin: auto;
+  margin-top: 120px;
+}
+
+.content-title span {
+  color: rgb(215, 6, 6);
+}
+
+.content-cards {
+  padding: 50px 0;
+  display: grid;
+  grid-template-areas: 
+    "one two three four";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  width: 80%;
+  margin: 50px auto;
+  margin-bottom: 0;
+}
+
+.content-cards--element {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(71, 71, 72, 0.2) 0px 0px 20px;
+  cursor: pointer;
+}
+
+.thumb {
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.content-cards--element:hover{
+  background-color: rgb(215, 6, 6);
+}
+
+.content-cards--element:hover img {
+  transform: scale(1.1);
+}
+
+.content-cards--element img {
+  transition: all .3s;
+  width: 100%;
+  opacity: .9;
+  margin: 0;
+  padding: 0;
+}
+
+.content-cards--element p {
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+  padding: .5rem;
+  padding-bottom: 1rem;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 820px){
+  .header-title {
+    font-size: calc(2.5rem + 2.5vmin);
+    line-height: calc(3rem + 2.5vmin);
+  }
+
+  .background {
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 15px;
+    animation: 20s rotate infinite ease-in-out;
+  }
+
+  .food-container {
+    width: 85%;
+    grid-template-areas: 
+      ". one ."
+      "two one three"
+      "two four three"
+      "five four six"
+      "five seven six"
+      "eight seven nine"
+      "eight ten nine"
+      "eleven ten twelve"
+      "eleven thirteen twelve"
+      "fourteen thirteen .";
+  }
+
+  .food-name {
+    font-size: 1.3rem;
+    margin: .3rem 0;
+  }
+
+  .card-link {
+    width: 60%;
+  }
+
+  .visit {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+  
+  .card-caption {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .visit {
+    margin: .5rem 0;
+  }
+
+  .content-cards {
+    width: 80%;
+    grid-template-areas: "one two three";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px){
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    background-color: rgb(215, 6, 6);
+    height: 30vh;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    right: -100%;
+    transition: all .8s;
+    opacity: .9;
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  nav .menu-toggle{
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+
+  .active_menu .nav-line{
+    background-color: black;
+  }
+
+  .nav-line {
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: rgb(215, 6, 6);
+  }
+
+  .nav-line.active{
+    background-color: pink;
+  }
+
+  .nav-line:nth-child(2){
+    margin: 5px 0;
+  }
+
+  .nav-list li {
+    margin: 15px 0;
+  }
+
+  header {
+    display: grid;
+    height: calc(100vh - 90px);
+    grid-template-areas:
+      "."
+      "image"
+      "main"
+      ".";
+    width: 90vw;
+    margin: auto;
+    place-items: center;
+    position: relative;
+  }
+
+  .header-main {
+    width: max-content;
+    grid-area: main;
+    position: absolute;
+    left: 0;
+  }
+
+  header img {
+    grid-area: image;
+  }
+
+  h2 {
+    font-size: calc(1.5rem + 1.5vmin);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .food-container {
+    gap: 10px;
+    width: 90%;
+    grid-template-areas: 
+      "one ."
+      "one two"
+      "three two"
+      "three four"
+      "five four"
+      "five six"
+      "seven six"
+      "seven eight"
+      "nine eight"
+      "nine ten"
+      "eleven ten"
+      "eleven twelve"
+      "thirteen twelve"
+      "thirteen fourteen"
+      ". fourteen"
+      ;
+  }
+
+  .food-card{
+    box-shadow: rgba(67, 67, 68, 0.2) 0px 0px 10px;
+    padding-top: 1.8rem;
+  }
+
+  .food-name {
+    font-size: 1.1rem;
+    margin: .3rem 0;
+  }
+
+  .visit {
+    font-size: 1.1rem;
+  }
+
+  .food-card img {
+    width: calc(100% - 1rem);
+    margin: auto;
+  }
+
+  .contact form {
+    display: grid;
+    grid-template-areas: 
+      "name"
+      "email"
+      "feedback";
+    gap: .5rem;
+    width: 70%;
+    margin: auto;
+  }
+
+  .content-title {
+    width: 90%;
+    text-align: center;
+    margin-bottom: -30px;
+  }
+
+  .content-cards{
+    grid-template-areas: "one two";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 90%;
+  }
+
+  .content-cards p {
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .background {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+}
