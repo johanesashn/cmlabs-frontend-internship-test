@@ -25,7 +25,7 @@ export default function Navbar(){
       });
       
     return (
-        <nav className={navbar ? "active_nav" : ""}>
+      <nav className={navbar ? "active_nav" : ""}>
         <h3 className="nav-title">F<span className={navSpan ? "active_span" : ""}>OO</span>DIES</h3>
         <ul className={`nav-list ${showList ? "active" : ""}`}>
             <li><a href="#home">Home</a></li>
