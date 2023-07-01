@@ -25,9 +25,9 @@ export default function Navbar(){
       });
       
     return (
-        <nav className={navbar ? "active_nav" : ""}>
-        <h3 className="nav-title navbarChild-title">F<span className={navSpan ? "active_span" : ""}>OO</span>DIES</h3>
-        <a className="navbarChild-home" href="/">Home</a>
+        <nav className={navbar ? "active_nav nav-child" : "nav-child"}>
+            <h3 className="navbarChild-title">F<span className={navSpan ? "active_span" : ""}>OO</span>DIES</h3>
+            <a className="navbarChild-home" href="/">Home</a>
       </nav>
     )
 }

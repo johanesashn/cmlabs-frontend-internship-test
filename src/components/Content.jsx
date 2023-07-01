@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import NavbarChild from "./NavbarChilld"
 import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
+import { Link } from "react-router-dom";
 
 export default function Content(){
     const { food } = useParams();
@@ -10,6 +11,7 @@ export default function Content(){
     useEffect(() => {
         // ini disuruh pakai ajax makanya beda
         // biasanya kan pakai fetch
+        console.log("food " + food)
         $.ajax({
             url: `https://www.themealdb.com/api/json/v1/1/filter.php?c=${food}`,
             method: 'GET',
@@ -19,14 +21,15 @@ export default function Content(){
                 return {
                   name: meal.strMeal,
                   image: meal.strMealThumb,
-                };
-              });
-              setMeals(meals);
+                  id: meal.idMeal
+                }
+              })
+              setMeals(meals)
             },
             error: function(xhr, status, error) {
-              console.error(error);
+              console.error(error)
             }
-          });
+          })
           
           window.scrollTo({
             top: 0, 
@@ -40,6 +43,12 @@ export default function Content(){
                 <img src={meal.image} alt="" />
             </div>
             <p>{meal.name}</p>
+            <Link 
+              className="content-link"
+              to={`/recipe/${meal.id}`}
+            >
+              <button className="visit">Make it</button>
+            </Link>
         </div>
     ))
 

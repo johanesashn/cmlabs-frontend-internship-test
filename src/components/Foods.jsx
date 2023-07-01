@@ -16,14 +16,14 @@ export default function Foods(){
                 return {
                   name: category.strCategory,
                   image: category.strCategoryThumb,
-                };
-              });
-              setCards(cards);
+                }
+              })
+              setCards(cards)
             },
             error: function(xhr, status, error) {
-              console.error(error);
+              console.error(error)
             }
-          });
+          })
     }, [])
 
     const cardElements = cards.map((card, index) => {
