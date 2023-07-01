@@ -68,6 +68,8 @@ nav .menu-toggle {
 
 .nav-title {
   font-size: calc(1rem + 1.5vmin);
+  align-self: center;
+  margin: 0;
 }
 
 nav.active_nav {
@@ -776,8 +778,8 @@ h3 {
   }
 
   .recipe-title h2{
-    font-size: calc(1rem + 1.5vmin);
-    line-height: calc(1rem + 1.5vmin);
+    font-size: calc(1.4rem + 1.5vmin);
+    line-height: calc(1.4rem + 1.5vmin);
   }
 
   .recipe-title p {
