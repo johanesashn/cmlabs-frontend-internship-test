@@ -31,46 +31,32 @@ export default function Foods(){
             let food = ""
             if (index === 0) {
                 name = "one"
-                food = "beef"
             } else if (index === 1) {
                 name = "two"
-                food = "Chicken"
             } else if (index === 2) {
                 name = "three"
-                food = "Dessert"
             } else if (index === 3) {
                 name = "four"
-                food = "Lamb"
             } else if (index === 4) {
-                food = "Miscellaneous"
                 name = "five"
             } else if (index === 5) {
                 name = "six"
-                food = "Pasta"
             } else if (index === 6) {
                 name = "seven"
-                food = "Pork"
             } else if (index === 7) {
                 name = "eight"
-                food = "Seafood"
             } else if (index === 8) {
                 name = "nine"
-                food = "Side"
             } else if (index === 9) {
                 name = "ten"
-                food = "Starter"
             } else if (index === 10) {
                 name = "eleven"
-                food = "Vegan"
             } else if (index === 11) {
                 name = "twelve"
-                food = "Vegetarian"
             } else if (index === 12) {
                 name = "thirteen"
-                food = "Breakfast"
             } else if (index === 13) {
                 name = "fourteen"
-                food = "Goat"
             }
 
             return (
@@ -79,7 +65,7 @@ export default function Foods(){
                     <div className="card-caption">
                         <p className="food-name">{card.name}</p>
                         <Link 
-                            to={`/content/${food}`}
+                            to={`/content/${card.name}`}
                             className="card-link"
                         >
                             <button 
