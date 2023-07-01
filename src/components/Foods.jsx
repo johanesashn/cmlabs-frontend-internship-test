@@ -85,7 +85,7 @@ export default function Foods(){
                             <button 
                                 className="visit"
                             >
-                                visit
+                                See
                             </button>
                         </Link>
                     </div>
