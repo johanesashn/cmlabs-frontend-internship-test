@@ -28,6 +28,10 @@ export default function Content(){
             }
           });
           
+          window.scrollTo({
+            top: 0, 
+            behavior: "instant"
+          })
     }, [])
 
     const mealElements = meals.map(meal => (
