@@ -6,5 +6,5 @@ This website is build by using ReactJs, Javascript, Es6, Ajax, jquery, HTML, and
 
 ## How to run project? 
 - Open the website using this link: https://jofood.netlify.app/
-- choose the food you want to make through the card and click visit
-- See the foods according the type you've chosen
+- choose the food type you want to make through the card and click "see"
+- Choose the food according the type you've chosen and click "make it" to see the instruction
